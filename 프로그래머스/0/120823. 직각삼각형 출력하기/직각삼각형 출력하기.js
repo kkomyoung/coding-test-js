@@ -21,5 +21,4 @@ rl.on('line', function (line) {
     }
     
     console.log(array.join('\n'));
-    return array.join('\n');
 });
