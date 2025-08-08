@@ -12,7 +12,7 @@ function solution(participant, completion) {
         }
     }
     
-    // 만들어진거랑 완주자랑 비교해서 있으면 값 1 올려주기 값이 0인곳에만 딱 한번 올릴 수 있음
+    // 만들어진거랑 완주자랑 비교해서 있으면 값 1 올려주기
     for (const name of completion) {
         map.set(name, map.get(name) + 1)
     }
