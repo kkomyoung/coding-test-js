@@ -5,16 +5,16 @@
 
 # 2(n-1)+1
 
-
-
 def solution(n):
     answer = []
     
-    def hanoi(n):
+    # 횟수만 찾아낼 떄
+    def hanoi_count(n):
         if n == 1:
             return 1
-        return 2 * hanoi(n-1) + 1
+        return 2 * hanoi_count(n-1) + 1
     
+    # 경로를 알아낼 때
     def hanoi_root(n, start, temp, end):
         if n == 1:
             answer.append([start, end])
@@ -24,7 +24,6 @@ def solution(n):
         answer.append([start, end])
         hanoi_root(n-1, temp, start, end)
         
-
-    print(hanoi_root(n, 1, 2, 3))
+    hanoi_root(n, 1, 2, 3)
     
     return answer
